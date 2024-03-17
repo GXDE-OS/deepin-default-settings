@@ -10,7 +10,7 @@ Architecture: all
 Depends: ${misc:Depends}, deepin-artwork, deepin-default-settings-tuning(>= 2018.1.23), iw, deepin-wallpapers
 Suggests: binfmt-support
 Conflicts: chrome-default-settings,
- deepinop, deepin-default-settings-network
+ deepinop, deepin-default-settings-network, deepin-default-settings
 Replaces: deepinop, deepin-default-settings-network
 Description: default settings for deepin destkop environment
  This package does tweaking and to provide better experience of deepin desktop
@@ -20,6 +20,7 @@ Package: gxde-default-settings-tuning
 Architecture: all
 Depends: ${misc:Depends} 
 Replaces: deepin-default-settings
+Conflicts: gxde-default-settings-tuning
 Description: default settings for gxde destkop environment - misc overrides
  This package does tweaking and to provide better experience of gxde desktop
  environment.
