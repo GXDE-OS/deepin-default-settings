@@ -1,11 +1,11 @@
-Source: deepin-default-settings
+Source: gxde-default-settings
 Section: admin
 Priority: optional
-Maintainer: sysdev <sysdev@deepin.com>
+Maintainer: gfdgd xi <3025613752@qq.com>, sysdev <sysdev@deepin.com>
 Standards-Version: 3.9.4
 Build-Depends: debhelper (>= 8.1.3~)
 
-Package: deepin-default-settings
+Package: gxde-default-settings
 Architecture: all
 Depends: ${misc:Depends}, deepin-artwork, deepin-default-settings-tuning(>= 2018.1.23), iw, deepin-wallpapers
 Suggests: binfmt-support
@@ -16,12 +16,12 @@ Description: default settings for deepin destkop environment
  This package does tweaking and to provide better experience of deepin desktop
  environment.
 
-Package: deepin-default-settings-tuning
+Package: gxde-default-settings-tuning
 Architecture: all
 Depends: ${misc:Depends} 
-Replaces: deepin-default-settings (<= 2018.1.23)
-Description: default settings for deepin destkop environment - misc overrides
- This package does tweaking and to provide better experience of deepin desktop
+Replaces: deepin-default-settings
+Description: default settings for gxde destkop environment - misc overrides
+ This package does tweaking and to provide better experience of gxde desktop
  environment.
  .
  This package includes files to override cups default page and fcitx icon.

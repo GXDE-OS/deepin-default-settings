@@ -1,2 +1,2 @@
-deb [by-hash=force] http://packages.deepin.com/deepin panda main contrib non-free
-#deb-src http://packages.deepin.com/deepin panda main contrib non-free
+deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
+# deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
