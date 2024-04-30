@@ -1,3 +1,10 @@
+gxde-default-settings (2024.04.30) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * 
+
+ -- gfdgd_xi <3025613752@qq.com>  Tue, 30 Apr 2024 21:32:59 +0800
+
 gxde-default-settings (2024.03.17) unstable; urgency=low
 
   * ['Autobuild release-candidate: e213e8e6660c8ba7c9364d3a4c4164cfbaa49c44']
