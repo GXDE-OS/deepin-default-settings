@@ -75,7 +75,7 @@ mkdir -p /etc/skel/Desktop;
 mkdir -p /etc/skel/Documents;
 mkdir -p /etc/skel/Downloads;
 mkdir -p /etc/skel/Music;
-mkdir -p /etc/skel/Pictures;
+mkdir -p /etc/skel/Pictures/GXDE;
 mkdir -p /etc/skel/Videos;
 mkdir -p /etc/skel/.Public;
 
@@ -84,7 +84,7 @@ mkdir -p /etc/skel/.Public;
 for file in `ls /usr/share/wallpapers/deepin/`
 do
 	if [ ! -f /etc/skel/Pictures/$file ]; then
-		ln -s  /usr/share/wallpapers/deepin/$file /etc/skel/Pictures/$file
+		ln -sv  /usr/share/wallpapers/deepin/$file /etc/skel/Pictures/GXDE/$file
 
 	fi
 done
@@ -94,10 +94,10 @@ done
 mkdir -p /etc/skel/.local/share/Trash
 
 # change sources.list panda
-case $(uname -m) in
-	"x86_64"|"i686"|"i386"|"amd64"|"x86")
-		sed -i 's/deepin unstable/deepin panda/g' /etc/apt/sources.list >/dev/null 2>&1||true
-	;;
-esac
+#case $(uname -m) in
+#	"x86_64"|"i686"|"i386"|"amd64"|"x86")
+#		sed -i 's/deepin unstable/deepin panda/g' /etc/apt/sources.list >/dev/null 2>&1||true
+#	;;
+#esac
 
 exit 0
