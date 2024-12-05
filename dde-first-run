@@ -41,31 +41,5 @@ if __name__ == "__main__":
             if path.exists(desktop_file):
                 shutil.copyfile(desktop_file, path.join(desktop_path, desktop))
 
-    chrome_config = None
-    if not path.exists(path.expanduser('~/.config/google-chrome')):
-        if path.exists('/usr/share/deepin-default-settings/google-chrome/override-chrome-config.tar'):
-            chrome_config = '/usr/share/deepin-default-settings/google-chrome/override-chrome-config.tar'
-        elif path.exists('/usr/share/deepin-default-settings/google-chrome/chrome-config-%s.tar' % lang):
-            chrome_config = '/usr/share/deepin-default-settings/google-chrome/chrome-config-%s.tar' % lang
-        elif path.exists('/usr/share/deepin-default-settings/google-chrome/chrome-config.tar'):
-            chrome_config = '/usr/share/deepin-default-settings/google-chrome/chrome-config.tar'
-        else:
-            chrome_config = None
-
-    if chrome_config is not None:
-        import tarfile
-        tar = tarfile.open(chrome_config)
-        tar.extractall(path.expanduser('~/.config/'))
-        tar.close()
-
-    if path.exists(path.expanduser('~/.config/google-chrome/PepperFlash/latest-component-updated-flash')):
-        user_name=getpass.getuser()
-        pepperflash = path.expanduser('~/.config/google-chrome/PepperFlash/latest-component-updated-flash')
-        with open(pepperflash,"r") as f:
-            lines = f.readlines()
-        with open(pepperflash,"w") as f:
-            for line in lines:
-                f.write(re.sub(r'deepin',user_name,line))
-
     if path.exists(path.expanduser('~/.config/autostart/dde-first-run.desktop')):
         remove(path.expanduser('~/.config/autostart/dde-first-run.desktop'))
